@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/white" android:state_selected="true">
+        <shape>
+            <!---背景填充颜色-->
+            <solid android:color="@color/main_color" />
+            <corners android:radius="@dimen/dp_15"/>
+        </shape>
+
+
+    </item>
+    <item android:color="@color/black">
+        <shape>
+            <!---背景填充颜色-->
+            <solid android:color="#E7E7E7" />
+            <corners android:radius="@dimen/dp_15"/>
+        </shape>
+    </item>
+</selector>

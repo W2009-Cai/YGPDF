@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850607270871",
+    "project_id": "simple-pdf-1978c",
+    "storage_bucket": "simple-pdf-1978c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850607270871:android:08bf806726a23b54a57992",
+        "android_client_info": {
+          "package_name": "com.yg.pdf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850607270871-0bd2baem16ieoo4dib418n26s5110jbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXItNhX1ODpapoCJISZQcO5EFvAZFBR2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850607270871-0bd2baem16ieoo4dib418n26s5110jbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

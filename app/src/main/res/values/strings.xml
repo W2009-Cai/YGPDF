@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">SIMPLE PDF</string>
+    <string name="facebook_app_id">128170540129405</string>
+    <!--启动页-->
+    <string name="start">START</string>
+    <string name="privacy_info">By clicking Start, I agree to the </string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="start_loading">Loading…</string>
+    <string name="about_us">About Us</string>
+    <string name="exit">Exit</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="confirm_to_logout_of">Confirm to logout of ?</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="drawer_open">三</string>
+    <string name="drawer_close">←</string>
+    <string name="rename">rename</string>
+    <string name="share">share</string>
+    <string name="delete">delete</string>
+    <string name="please_input_pdf_name">please input pdf name</string>
+    <string name="complete">Complete</string>
+    <string name="max_pic">max pictures is 15</string>
+    <string name="next">Next</string>
+    <string name="next_step">Next step</string>
+    <string name="auto_crop">Auto crop</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="done">Done</string>
+    <string name="recognize">Recognize</string>
+    <string name="adjust">Adjust</string>
+
+    <string name="filter_gray">Gray</string>
+    <string name="filter_invert">Invert</string>
+    <string name="filter_original">Original</string>
+    <string name="filter_super">Super</string>
+    <string name="filter_bw">B&amp;W</string>
+    <string name="filter_enhance">Enhance</string>
+    <string name="contrast_ratio">Contrast ratio</string>
+    <string name="brightness">Brightness</string>
+    <string name="details">Details</string>
+
+
+    <string name="notification_pdf_scanner_text">Simple PDF</string>
+    <string name="notification_scan_to_pdf_text">Scan to PDF</string>
+    <string name="notification_pictures_text">Take pictures</string>
+    <string name="notification_pdf_text">PDF</string>
+</resources>
