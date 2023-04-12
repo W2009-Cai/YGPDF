@@ -4,6 +4,7 @@ import ando.file.core.FileOperator
 import android.app.Application
 import com.drake.brv.utils.BRV
 import com.yg.ad.PDFAdLoadSDK
+import com.yg.pdf.utils.RemoteConfigManager
 import com.yg.pdf.weight.NotificationUtils
 
 class MainApp : Application() {
@@ -15,5 +16,6 @@ class MainApp : Application() {
         PDFAdLoadSDK.getInstance().initAdSDK(this)
         AppOpenManager(this)
         NotificationUtils.initNotificationCompat(this)
+        RemoteConfigManager.init()
     }
 }

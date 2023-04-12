@@ -2,9 +2,13 @@ package com.yg.pdf
 
 import ando.file.core.FileUtils
 import android.Manifest
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.util.Base64
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -28,6 +32,8 @@ import com.yg.pdf.utils.SavePicUtil
 import com.yg.pdf.utils.toast
 import com.yg.pdf.weight.*
 import java.io.File
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -46,6 +52,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             } else {
                 requestPermissions()
             }
+        }
+    }
+    fun facebookHashKey() {
+        try {
+            val info: PackageInfo = packageManager
+                .getPackageInfo("com.yg.pdf", PackageManager.GET_SIGNATURES)
+            for (signature in info.signatures) {
+                val md = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+        } catch (e: NoSuchAlgorithmException) {
         }
     }
 

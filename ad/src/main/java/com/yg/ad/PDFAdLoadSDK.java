@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import com.facebook.ads.AdSettings;
 import com.yg.ad.utils.PDFSPUtils;
 import com.facebook.CustomTabMainActivity;
 import com.facebook.FacebookActivity;
@@ -50,8 +51,7 @@ public class PDFAdLoadSDK {
             MobileAds.setRequestConfiguration(configuration);
 
             //Google Play Advertising id
-//            AdSettings.addTestDevice("8764e137-ef4b-4cf9-b603-6f5675d307a9");
-//            AdSettings.addTestDevice("b9f98655-e529-4b76-8d7d-10ca1ad1abe1");
+            AdSettings.addTestDevice("f424e232-2ce0-46f1-a781-4d592af6b20e");
 //            AppsFlyerLib.getInstance().setDebugLog(true);
         }
     }

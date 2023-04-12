@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+    <entry>
+        <key>dynamic_config</key>
+        <value>
+            {
+            "inside":{
+            "showAd":1,
+            "maxShowAdCount":5,
+            "spacedPage":1,
+            "isGP":1,
+            "isShowBackAd":2
+            }
+            }
+        </value>
+    </entry>
+</defaults>

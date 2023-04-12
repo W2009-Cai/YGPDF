@@ -22,12 +22,14 @@ import com.itextpdf.text.Image
 import com.itextpdf.text.PageSize
 import com.itextpdf.text.pdf.PdfWriter
 import com.lxj.xpopup.XPopup
+import com.yg.pdf.AdLoadManager
 import com.yg.pdf.MainActivity
 import com.yg.pdf.R
 import com.yg.pdf.adapter.MyPagerAdapter
 import com.yg.pdf.base.BaseActivity
 import com.yg.pdf.databinding.ActivityImageFilterBinding
 import com.yg.pdf.utils.FileUtil
+import com.yg.pdf.utils.RemoteConfigManager
 import com.yg.pdf.utils.SavePicUtil
 import com.yg.pdf.utils.log
 import com.yg.pdf.weight.AdjustPopup
@@ -246,7 +248,12 @@ class ImageFilterActivity : BaseActivity<ActivityImageFilterBinding>() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-//        AdLoadManager.showInterstitialAd(this, "", null)
+        if (RemoteConfigManager.getmRemoteConfig() != null && RemoteConfigManager.getmRemoteConfig()
+                ?.inside != null && RemoteConfigManager.getmRemoteConfig()?.inside
+                ?.isShowBackAd == 1 && AdLoadManager.canShowGpAd()
+        ) {
+            AdLoadManager.showInterstitialAd(this, "", null)
+        }
     }
 
     private fun refreshSelectFilter() {

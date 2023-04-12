@@ -13,6 +13,7 @@ import com.yg.pdf.adapter.CropPagerAdapter
 import com.yg.pdf.base.BaseActivity
 import com.yg.pdf.bean.CropImageBean
 import com.yg.pdf.databinding.ActivityCropBinding
+import com.yg.pdf.utils.RemoteConfigManager
 import com.yg.pdf.utils.SavePicUtil
 import com.yg.pdf.utils.log
 import com.yg.pdf.utils.saveImageInternal
@@ -162,7 +163,12 @@ class CropActivity : BaseActivity<ActivityCropBinding>() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        AdLoadManager.showInterstitialAd(this, "", null)
+        if (RemoteConfigManager.getmRemoteConfig() != null && RemoteConfigManager.getmRemoteConfig()
+                ?.inside != null && RemoteConfigManager.getmRemoteConfig()?.inside
+                ?.isShowBackAd == 1 && AdLoadManager.canShowGpAd()
+        ) {
+            AdLoadManager.showInterstitialAd(this, "", null)
+        }
     }
 
     private fun getCropImageView(position: Int? = null): CropImageView {

@@ -14,6 +14,7 @@ import com.yg.pdf.AdLoadManager
 import com.yg.pdf.R
 import com.yg.pdf.base.BaseActivity
 import com.yg.pdf.databinding.ActivityCameraBinding
+import com.yg.pdf.utils.RemoteConfigManager
 import com.yg.pdf.utils.SavePicUtil
 import com.yg.pdf.utils.saveImageInternal
 
@@ -116,7 +117,12 @@ class CameraActivity : BaseActivity<ActivityCameraBinding>() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        AdLoadManager.showInterstitialAd(this, "", null)
+        if (RemoteConfigManager.getmRemoteConfig() != null && RemoteConfigManager.getmRemoteConfig()
+                ?.inside != null && RemoteConfigManager.getmRemoteConfig()?.inside
+                ?.isShowBackAd == 1 && AdLoadManager.canShowGpAd()
+        ) {
+            AdLoadManager.showInterstitialAd(this, "", null)
+        }
     }
 
     override fun onResume() {

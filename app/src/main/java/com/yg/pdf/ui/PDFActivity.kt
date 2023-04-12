@@ -8,6 +8,7 @@ import com.yg.pdf.AdLoadManager
 import com.yg.pdf.R
 import com.yg.pdf.base.BaseActivity
 import com.yg.pdf.databinding.ActivityPdfBinding
+import com.yg.pdf.utils.RemoteConfigManager
 import java.io.File
 
 class PDFActivity : BaseActivity<ActivityPdfBinding>() {
@@ -47,7 +48,12 @@ class PDFActivity : BaseActivity<ActivityPdfBinding>() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        AdLoadManager.showInterstitialAd(this, "", null)
+        if (RemoteConfigManager.getmRemoteConfig() != null && RemoteConfigManager.getmRemoteConfig()
+                ?.inside != null && RemoteConfigManager.getmRemoteConfig()?.inside
+                ?.isShowBackAd == 1 && AdLoadManager.canShowGpAd()
+        ) {
+            AdLoadManager.showInterstitialAd(this, "", null)
+        }
     }
 
     override fun getLayoutId(): Int {

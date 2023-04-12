@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.ViewGroup
 import com.yg.ad.utils.*
 import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.LogUtils.getConfig
+import com.yg.pdf.utils.RemoteConfigManager
 
 /**
  */
@@ -219,13 +221,11 @@ object AdLoadManager {
 
     fun canShowGpAd(): Boolean {
         //debug模式 开启非GP广告
-        return true
-//        return if (isGp || BuildConfig.DEBUG) {
-//            true
-//        } else {
-//            false
-////            getConfig()?.getLong("nogp_ad")?.toInt() == 1
-//        }
+        return if (isGp || BuildConfig.DEBUG) {
+            true
+        } else {
+            RemoteConfigManager.getmRemoteConfig()?.inside?.isGP == 1
+        }
     }
 
     private fun log(str: String) {
