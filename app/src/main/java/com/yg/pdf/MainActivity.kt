@@ -13,6 +13,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.constraintlayout.widget.ConstraintSet
+import com.blankj.utilcode.util.AppUtils
 import com.drake.brv.BindingAdapter
 import com.drake.brv.utils.grid
 import com.drake.brv.utils.setup
@@ -53,11 +54,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 requestPermissions()
             }
         }
+
     }
+
     fun facebookHashKey() {
         try {
             val info: PackageInfo = packageManager
-                .getPackageInfo("com.yg.pdf", PackageManager.GET_SIGNATURES)
+                .getPackageInfo(AppUtils.getAppPackageName(), PackageManager.GET_SIGNATURES)
             for (signature in info.signatures) {
                 val md = MessageDigest.getInstance("SHA")
                 md.update(signature.toByteArray())

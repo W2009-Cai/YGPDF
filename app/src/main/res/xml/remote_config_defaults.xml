@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <defaults>
     <entry>
-        <key>dynamic_config</key>
+        <key>Dynamic_config</key>
         <value>
             {
             "inside":{

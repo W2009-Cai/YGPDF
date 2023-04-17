@@ -45,4 +45,5 @@
     <string name="notification_scan_to_pdf_text">Scan to PDF</string>
     <string name="notification_pictures_text">Take pictures</string>
     <string name="notification_pdf_text">PDF</string>
+    <string name="no_pic">It is possible to draw more than before</string>
 </resources>

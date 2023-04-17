@@ -21,7 +21,8 @@ public class AdLoadManagerUtil {
 //
 //            Bundle bundle = new Bundle();
 //            bundle.putDouble(FirebaseAnalytics.Param.VALUE, revenue);
-//            bundle.putString(FirebaseAnalytics.Param.CURRENCY, "USD");
+//            bundle.putString(FirebaseAnalytics.Par
+//            am.CURRENCY, "USD");
 //            AnalyticsUtils.INSTANCE.logEvent("Ads_Show_Revenue", bundle);
 //            LogUtils.d("TAG1", "Total_Ads_Revenue事件上报 currentEcpm：" + revenue);
 //

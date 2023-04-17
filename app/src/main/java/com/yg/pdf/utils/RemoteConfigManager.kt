@@ -31,7 +31,7 @@ object RemoteConfigManager {
     }
 
     fun init() {
-        mRemoteConfig = GsonUtils.fromJson(firebaseRemoteConfig?.getString("dynamic_config"), RemoteConfig::class.java)
+        mRemoteConfig = GsonUtils.fromJson(firebaseRemoteConfig?.getString("Dynamic_config"), RemoteConfig::class.java)
     }
 
     /**设置默认值*/
@@ -41,13 +41,13 @@ object RemoteConfigManager {
 
     fun getmRemoteConfig(): RemoteConfig? {
         firebaseRemoteConfig?.fetchAndActivate()
-        Log.d("TAG", "RemoteConfig: ${firebaseRemoteConfig?.getString("dynamic_config")}")
-        mRemoteConfig = GsonUtils.fromJson(firebaseRemoteConfig?.getString("dynamic_config"), RemoteConfig::class.java)
+        Log.d("TAG", "RemoteConfig: ${firebaseRemoteConfig?.getString("Dynamic_config")}")
+        mRemoteConfig = GsonUtils.fromJson(firebaseRemoteConfig?.getString("Dynamic_config"), RemoteConfig::class.java)
         return mRemoteConfig
     }
 
     fun displayWelcomeMessage() {
-        Log.d("TAG", "displayWelcomeMessage: ${firebaseRemoteConfig?.getString("dynamic_config")}")
+        Log.d("TAG", "displayWelcomeMessage: ${firebaseRemoteConfig?.getString("Dynamic_config")}")
         Log.d("TAG", "displayWelcomeMessage: $mRemoteConfig")
         // [START get_config_values]
 //        val welcomeMessage: String = remoteConfig.getString(WELCOME_MESSAGE_KEY)

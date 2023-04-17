@@ -57,7 +57,7 @@
         android:gravity="bottom|center"
         android:text="@string/notification_pictures_text"
         android:textColor="#ff565656"
-        android:textSize="10.0sp" />
+        android:textSize="@dimen/sp_10" />
 
     <TextView
         android:id="@+id/pdf_tv"
@@ -68,5 +68,5 @@
         android:gravity="bottom|center"
         android:text="@string/notification_pdf_text"
         android:textColor="#ff565656"
-        android:textSize="10.0sp" />
+        android:textSize="@dimen/sp_10" />
 </LinearLayout>
