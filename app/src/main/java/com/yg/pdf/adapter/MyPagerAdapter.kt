@@ -24,7 +24,7 @@ class MyPagerAdapter(private var mViewList: ArrayList<FilterStatusBean>) : Pager
         val gPUImageView = inflate.findViewById<GPUImageView>(R.id.ivIcon)
         gPUImageView.setScaleType(GPUImage.ScaleType.CENTER_INSIDE)
         inflate.tag = position.toString()
-            gPUImageView.setImage(mViewList[position].bitmap)
+        gPUImageView.setImage(mViewList[position].bitmap)
         container.addView(inflate)
         return inflate
     }
