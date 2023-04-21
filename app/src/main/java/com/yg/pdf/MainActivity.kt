@@ -54,7 +54,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 requestPermissions()
             }
         }
-
     }
 
     fun facebookHashKey() {

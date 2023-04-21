@@ -34,7 +34,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
 
     //admob
-    api 'com.google.android.gms:play-services-ads:22.0.0'
+    api 'com.google.android.gms:play-services-ads:21.5.0'
 //    api 'com.google.android.ads:mediation-test-suite:3.0.0'
     //facebook
     api 'com.google.ads.mediation:facebook:6.13.7.0'

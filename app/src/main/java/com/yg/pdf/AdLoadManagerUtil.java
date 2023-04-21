@@ -1,13 +1,5 @@
 package com.yg.pdf;
 
-import android.os.Bundle;
-
-import com.blankj.utilcode.util.LogUtils;
-import com.google.firebase.analytics.FirebaseAnalytics;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class AdLoadManagerUtil {
     private static double defAdValue = 0.01;//默认判断累计ecpm大于等于上报的值
 

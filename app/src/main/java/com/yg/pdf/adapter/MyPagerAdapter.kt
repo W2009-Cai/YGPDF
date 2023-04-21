@@ -16,7 +16,7 @@ class MyPagerAdapter(private var mViewList: ArrayList<FilterStatusBean>) : Pager
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object`
+        return view == `object`
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
